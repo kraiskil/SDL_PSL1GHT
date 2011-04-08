@@ -48,9 +48,11 @@ static void eventHandle(u64 status, u64 param, void * userdata) {
     }
 }
 
+/* This is the main function where SDL requests events from the system */
 void
 PSL1GHT_PumpEvents(_THIS)
 {
+    PSL1GHT_DispatchKeyboardEvents();
     sysCheckCallback();
 }
 

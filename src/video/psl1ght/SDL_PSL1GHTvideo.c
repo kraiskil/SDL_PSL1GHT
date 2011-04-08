@@ -121,6 +121,8 @@ PSL1GHT_VideoInit(_THIS)
 
     PSL1GHT_InitSysEvent(_this);
 
+    PSL1GHT_InitKeyboard(_this);
+
     initializeGPU(devdata);
     PSL1GHT_InitModes(_this);
 
@@ -139,6 +141,7 @@ PSL1GHT_VideoQuit(_THIS)
     printf("PSL1GHT_VideoQuit()\n");
     PSL1GHT_QuitModes(_this);
     PSL1GHT_QuitSysEvent(_this);
+    PSL1GHT_QuitKeyboard(_this);
     SDL_free( _this->driverdata);
 
 }
